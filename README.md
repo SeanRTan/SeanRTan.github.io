@@ -1,3 +1,0 @@
-# SeanRTan.github.io
-
-balls
