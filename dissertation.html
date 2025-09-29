@@ -38,18 +38,37 @@
 							<section id="content">
 								<a href="#" class="image fit"><img src="images/Dissertation.png" alt="" /></a>
 								<h3></h3>
-								<p>My dissertation was focused around the reseraching and evaluating the decision-making algorithms of AI agents.
-									
-								</p>
-								<h3>Sed Magna Ornare</h3>
-								<p></p>
+								My dissertation was focused around the researching and evaluation of the decision-making algorithms of AI agents.<p></p>
+									An artefact was created along side the paper to aid the research. It was created in Unreal Engine 5 and tested behaviour trees as the algorithm of choice.
+									Consenting volunteers would be allowed to interact with the AI agent and after, they would give feedback via a questionnaire.
+
+								<p></p> 
+								<h4>Topics Covered:</h4>
 									<ul>
-									<li>Faucibus orci lobortis ac adipiscing integer.</li>
-									<li>Col accumsan arcu mi aliquet placerat.</li>
-									<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-									<li>Blandit massa non blandit tempor interdum.</li>
-									<li>Lacinia mattis arcu nascetur lobortis.</li>
+									<li>AI Believability in Games</li>
+									<li>Finite State Machines</li>
+									<li>Fuzzy Logic</li>
+									<li>Scripted AI</li>
+									<li>Behaviour Trees</li>
+									<li>Movement, Avoidance, Routing, Planning & Orders (MARPO)</li>
+									<li>Influence Maps</li>
+									<li>Director AI</li>
+									<li>Utility Theory</li>
+									<li>Goal Oriented Action Planning (GOAP)</li>
 								</ul>
+								<ul class="actions">
+									<li><a href="Sean Tan GDEV60001 Games Development Project Dissertation.pdf" class="button">Download the Dissertation</a>
+								</ul>
+								<p></p> 
+								<h4>Post Submission Improvements</h4>
+								After the conclusion of the investigation, I mentioned some improvements I wished to implement, 
+								which was to change the method of AI control demonstrated in the artefact and to reduce the artefacts reliance on Unreal's blueprint system.<p></p> 
+
+								To implement the changes I had to rewrite a lot of the code, where I was able to demonstrate MARPO, a form of AI control that allows for long term tasks to be completed 
+								while still being able to react to changes on demand. It works by utilising 3 queues with differing levels of priority, and tasks that must be completed are popped into the queue. 
+								<p></p> Should the AI agent be completing a task from the queue with the lowest priority, and suddenly a task is popped into the queue with the highest, 
+								the AI agent will temporarily stop completing the current task to pursue the new task within the higher priority queue.
+
 							</section>
 
 					</div>
