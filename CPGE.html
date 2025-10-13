@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Landed by HTML5 UP</title>
+		<title>Sean Tan | Cross Platform Game Engine</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -21,6 +21,7 @@
 					<nav id="nav">
 						<ul>
 							<!--<li><a href="all-projects.html">All Projects</a></li>-->
+							
 							<li><a href="index.html#Links">Contacts</a></li>
 						</ul>
 					</nav>
@@ -41,16 +42,30 @@
 								<p>My final module was to create a 2D game engine in teams of 9 that could work on 2 different platforms. After an intervention amongst my team, 
 									we decided for the game engine to work on both windows and PS5s, 
 									additionally after taking into consideration of our strengths, we also decided to build the game engine with the intent of creating colony simulator-like games.</p>
-								<p>My contributions to the final product were the GameObject architecture, the scenes and scene manager architecture and the decision-making algorithm for the AI agents.</p>
+								<p>My contributions to the final product were the GameObject architecture, the scene graph and scene manager architecture and the decision-making algorithm for the AI agents.</p>
 								<h4>GameObject Architecture</h4>
-								<p>Pulling from my experience with Unity,</p>
-								<ul>
-									<li>Faucibus orci lobortis ac adipiscing integer.</li>
-									<li>Col accumsan arcu mi aliquet placerat.</li>
-									<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-									<li>Blandit massa non blandit tempor interdum.</li>
-									<li>Lacinia mattis arcu nascetur lobortis.</li>
-								</ul>
+								<p>My implementation of the GameObject architecture was based mainly on my experience with Unity's GameObject system. To create a GameObject, it had to be instantiated with a name,
+									it could also be a parent to multiple GameObjects or could be a child of a single gameobject. 
+									Additionally, the GameObject could have components associated with it, such as a transform or textures, 
+									these components were stored in a map, where the GameObject had add, get and remove component functions to navigate and interact with them.
+								</p>
+
+								<h4>Scene Graph and Scene Manager Architecture</h4>
+								<p>The scene graph was created with a similar ideology to the GameObjects. 
+									the scene graph was responsible for managing all the GameObjects associated with a certain "scene" and stored all of them using a map, with add, get and remove functions to interact with the game objects</p>
+									<p>The scene manager is reminiscent of the scene graph, it would be responsible for all the scenes however instead of using a map for storage it uses an index for simplicity.</p>
+								<h4>AI Agents' Decision-Making Algorithm</h4>
+								<p>Due to my dissertation focusing on decision-making algorithms, I was assigned to create the decision-making logic for the AI Agents, 
+									after discussing with a peer, we decided that MARPO was the best algorithm to use.</p>
+									<p>MARPO stands for Movement, Avoidance, Routing, Planning and Orders and is a type of decision-making algorithm 
+										that allows for the AI agents to conduct long term tasks while also being reactive to the environment around it. 
+										This is completed through the use of tasks and 3 queues. Tasks are the behaviours that are to be completed by the AI agent, which are to be added to the queues. </p>
+										<p>What makes MARPO unique is how the tasks interact with the queues, an AI agent will search through the 3 queues with a descending level of "priority", where if there is only a task in the "lowest priority" it will execute it.
+											However, if at any point during the execution of the current task, a task is added to a queue of higher priority, 
+											it will temporarily stop executing the current task to complete the newly added task. 
+											An example of where this could work was if an AI agent's task was to get from point A to B, 
+											and along the way there were surprise events like suddenly needing to find a key to get through a door or needing to fight off some enemies.
+										</p>
 							</section>
 
 					</div>
